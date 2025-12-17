@@ -1,0 +1,19 @@
+server:
+  port: 8761                # Default port Eureka server listens on
+
+spring:
+  application:
+    name: eureka-server     # Name your Eureka server
+
+eureka:
+  client:
+    register-with-eureka: false    # Don't register the Eureka server with itself
+    fetch-registry: false          # Don't fetch registry from itself
+    instance:
+      hostname: localhost
+
+  # (Optional) UI and logging configuration:
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
